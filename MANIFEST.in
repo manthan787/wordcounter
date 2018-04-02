@@ -1,0 +1,2 @@
+recursive-include wordcounter/templates *
+recursive-include wordcounter/static *

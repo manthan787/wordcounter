@@ -1,0 +1,36 @@
+<!doctype html>
+<head>
+    <title>WordCounter</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <h1 align="center">WordCounter</h1>      
+            <form method="POST">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="btn btn-success" id="basic-addon3">Word Count</span>
+                    </div>
+                    <input type="text" id="count" class="form-control" value={{word_count}} aria-describedby="basic-addon3" 
+                    width=20 readonly>
+                </div>
+                {% if error %}
+                    <div class="alert alert-danger" role="alert">
+                        {{error}}
+                    </div>
+                {% endif %}
+                <div class="form-group">
+                    <!-- <label for="exampleInputEmail1">Write something!</label> -->
+                    <textarea class="form-control" id="text" name="text" placeholder="Write something here!" rows="10">{{text}}</textarea>
+                </div>
+                <div class="form-group" align="center">
+                    <input type="submit" class="btn btn-primary" value="Submit">
+                </div>            
+            </form>
+        </div>    
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="{{url_for('static', filename='js/counter.js')}}" charset="utf-8"></script>
+</body>
