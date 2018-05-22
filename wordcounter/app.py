@@ -39,7 +39,7 @@ def main():
 @click.option("--port", "-p", type=click.INT, default=8000,
               help="Port on which to run the web application")
 def launch(port):
-    app.run(port=port)
+    app.run(host='0.0.0.0', port=port, debug=True)
 
 
 if __name__ == "__main__":
