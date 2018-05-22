@@ -14,3 +14,11 @@ following command:
     wordctr launch -p [port]
 
 This will launch the webapp on localhost using given port (if any).
+
+You can also build the app using docker using:
+
+    docker build -t <image_name>:<tag> .
+
+To run the docker container:
+
+    docker run -p 8000:8000 <image_name>
