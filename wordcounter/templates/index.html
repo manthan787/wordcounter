@@ -14,6 +14,7 @@
                     </div>
                     <input type="text" id="count" class="form-control" value={{word_count}} aria-describedby="basic-addon3" 
                     width=20 readonly>
+                    <span id="charcount">0 / 50</span>
                 </div>
                 {% if error %}
                     <div class="alert alert-danger" role="alert">
@@ -22,11 +23,12 @@
                 {% endif %}
                 <div class="form-group">
                     <!-- <label for="exampleInputEmail1">Write something!</label> -->
-                    <textarea class="form-control" id="text" name="text" placeholder="Write something here!" rows="10">{{text}}</textarea>
+                    <textarea class="form-control" id="text" name="text" placeholder="Write something here!" rows="10"
+                     maxlength="50">{{text}}</textarea>
                 </div>
                 <div class="form-group" align="center">
                     <input type="submit" class="btn btn-primary" value="Submit">
-                </div>            
+                </div>        
             </form>
         </div>    
     </div>
